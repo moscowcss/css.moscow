@@ -11,10 +11,11 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
   line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
+  font-family: sans-serif; /* 1 */
+
   -webkit-text-size-adjust: 100%; /* 3 */
+      -ms-text-size-adjust: 100%; /* 3 */
 }
 
 /* Sections
@@ -47,8 +48,9 @@ section {
  */
 
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+
+  font-size: 2em;
 }
 
 /* Grouping content
@@ -61,7 +63,8 @@ h1 {
 
 figcaption,
 figure,
-main { /* 1 */
+main {
+  /* 1 */
   display: block;
 }
 
@@ -90,8 +93,8 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  font-family: monospace, monospace; /* 1 */
 }
 
 /* Text-level semantics
@@ -104,6 +107,7 @@ pre {
 
 a {
   background-color: transparent; /* 1 */
+
   -webkit-text-decoration-skip: objects; /* 2 */
 }
 
@@ -123,9 +127,10 @@ a:hover {
  */
 
 abbr[title] {
-  border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
+
+  border-bottom: none; /* 1 */
 }
 
 /**
@@ -154,8 +159,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  font-family: monospace, monospace; /* 1 */
 }
 
 /**
@@ -171,8 +176,9 @@ dfn {
  */
 
 mark {
-  background-color: #ff0;
-  color: #000;
+  color: #000000;
+
+  background-color: #ffff00;
 }
 
 /**
@@ -190,9 +196,10 @@ small {
 
 sub,
 sup {
+  position: relative;
+
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -254,10 +261,11 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
+  margin: 0; /* 2 */
+
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: sans-serif; /* 1 */
 }
 
 /**
@@ -266,7 +274,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -276,7 +285,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -287,7 +297,8 @@ select { /* 1 */
  */
 
 button,
-html [type="button"], /* 1 */
+html [type="button"],
+/* 1 */
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; /* 2 */
@@ -301,8 +312,9 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+
+  border-style: none;
 }
 
 /**
@@ -321,9 +333,10 @@ button:-moz-focusring,
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
+
+  border: 1px solid #c0c0c0;
 }
 
 /**
@@ -334,11 +347,12 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
   display: table; /* 1 */
+  box-sizing: border-box; /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
+
+  color: inherit; /* 2 */
   white-space: normal; /* 1 */
 }
 
@@ -349,6 +363,7 @@ legend {
 
 progress {
   display: inline-block; /* 1 */
+
   vertical-align: baseline; /* 2 */
 }
 
@@ -386,8 +401,9 @@ textarea {
  */
 
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
+
+  -webkit-appearance: textfield; /* 1 */
 }
 
 /**
@@ -405,8 +421,9 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+
+  -webkit-appearance: button; /* 1 */
 }
 
 /* Interactive
@@ -417,7 +434,8 @@ textarea {
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
 
-details, /* 1 */
+details,
+/* 1 */
 menu {
   display: block;
 }
@@ -474,10 +492,8 @@ template {
 body {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -485,6 +501,9 @@ body {
   overflow: hidden;
 
   font-family: "GothamPro-Bold", Arial, sans-serif;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
 }
 
 h1 {
@@ -501,7 +520,6 @@ h1 {
   position: relative;
 
   display: -webkit-box;
-
   display: flex;
   flex-wrap: wrap;
   width: 480px;
@@ -521,7 +539,6 @@ h1 {
           transform: skewx(-31deg) translateX(81px);
 
   -webkit-animation: path1 1.5s ease;
-
           animation: path1 1.5s ease;
 }
 
@@ -530,7 +547,6 @@ h1 {
           transform: skewx(-31deg) translateX(79px);
 
   -webkit-animation: path2 1.5s ease;
-
           animation: path2 1.5s ease;
 }
 
@@ -540,7 +556,6 @@ h1 {
   right: 55px;
 
   -webkit-animation: star 1.5s ease;
-
           animation: star 1.5s ease;
 }
 
@@ -576,7 +591,6 @@ h1 {
 
   -webkit-animation: caret 1.5s steps(1),
   karettick 1.2s steps(1) infinite 1.5s;
-
           animation: caret 1.5s steps(1),
   karettick 1.2s steps(1) infinite 1.5s;
 }
@@ -594,7 +608,6 @@ h1 {
   background-color: #ffffff;
 
   -webkit-animation: text 1.5s steps(1);
-
           animation: text 1.5s steps(1);
 }
 
@@ -853,10 +866,10 @@ h1 {
     opacity: 0;
   }
   50% {
-    opacity: 1
+    opacity: 1;
   }
   100% {
-    opacity: 0
+    opacity: 0;
   }
 }
 
@@ -865,9 +878,22 @@ h1 {
     opacity: 0;
   }
   50% {
-    opacity: 1
+    opacity: 1;
   }
   100% {
-    opacity: 0
+    opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo {
+    display: none;
+  }
+
+  body {
+    background-image: url("../logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
   }
 }
