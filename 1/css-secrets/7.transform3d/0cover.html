@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    body {
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        position: relative;
+    }
+
+    h1 {
+	    top: 50px;
+	    left: 50px;
+	    width: auto;
+    }
+
+    img {
+	    position: absolute;
+	    right: 50px;
+	    bottom: 50px;
+	    width: 50%;
+	    height: auto;
+    }
+</style>
+
+<h1><span class="highlighted">7.</span> 3D трансформации</h1>
+
+<img src="cover.jpg" alt="">
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    $(document).keydown(function(e) {
+        if(e.which == 39) {
+            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/7.transform3d/1demo.html');
+        }
+
+	    if(e.which == 37) {
+		    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/6.counters/2demo.html');
+	    }
+    });
+</script>

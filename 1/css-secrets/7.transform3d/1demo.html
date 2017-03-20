@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    body {
+        background: #000;
+    }
+
+    .container {
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        margin-top: -150px;
+        margin-left: -150px;
+        position: fixed;
+        transform-style: preserve-3d;
+        transform: perspective(900px);
+    }
+
+    .face {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: coral;
+        background-size: cover;
+        box-shadow: inset 0 0 15px rgba(255,255,255,0.3), inset -30px -30px 80px rgba(0,0,0,0.3);
+    }
+
+    .face_pos_center {
+        top: 0;
+        left: 0;
+        transform: rotate3d(0,1,0,180deg);
+    }
+
+    .face_pos_right {
+        right: -300px;
+        top: 0;
+        transform-origin: 0 0;
+        transform: rotate3d(0, 1, 0, -90deg);
+    }
+
+    .face_pos_bottom {
+        top: 300px;
+        left: 0;
+        transform-origin: 0 0;
+        transform: rotate3d(1, 0, 0, 90deg);
+    }
+
+    .face_pos_left {
+        left: -300px;
+        top: 0;
+        transform-origin: 100% 0;
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+
+    .face_pos_top {
+        top: -300px;
+        left: 0;
+        transform-origin: 0 100%;
+        transform: rotate3d(1, 0, 0, -90deg);
+    }
+
+
+    .face_pos_front {
+        transform: translate3d(0, 0, 300px);
+    }
+
+    /**/
+
+    .container {
+        transform: perspective(900px) rotate3d(180,-75,0,-135deg);
+        transition: all 1s ease;
+    }
+
+    @-webkit-keyframes boxRotate {
+        0% { transform: perspective(900px) rotate3d(180,45,0,-175deg) }
+        50% { transform: perspective(900px) rotate3d(-45,180,0,135deg) }
+        100% { transform: perspective(900px) rotate3d(180,45,0,-175deg) }
+    }
+
+    @keyframes boxRotate {
+        0% { transform: perspective(900px) rotate3d(180,45,0,-175deg) }
+        50% { transform: perspective(900px) rotate3d(-45,180,0,135deg) }
+        100% { transform: perspective(900px) rotate3d(180,45,0,-175deg) }
+    }
+
+    .container {
+        -webkit-animation: boxRotate 15s infinite;
+        animation: boxRotate 15s infinite;
+    }
+</style>
+
+<div class="container">
+    <div class="face face_pos_center"></div>
+    <div class="face face_pos_right"></div>
+    <div class="face face_pos_bottom"></div>
+    <div class="face face_pos_left"></div>
+    <div class="face face_pos_top"></div>
+    <div class="face face_pos_front"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    $(document).keydown(function(e) {
+        if(e.which == 39) {
+            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/7.transform3d/2how-it-works.html');
+        }
+
+	    if(e.which == 37) {
+		    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/7.transform3d/0cover.html');
+	    }
+    });
+</script>

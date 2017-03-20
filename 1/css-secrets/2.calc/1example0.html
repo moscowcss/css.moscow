@@ -1,0 +1,114 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-size: 20px;
+		line-height: 24px;
+		font-family: Arial, sans-serif;
+	}
+
+	.wrapper {
+		background: lightblue;
+		text-align: center;
+		margin-top: 50px;
+		position: relative;
+		border: 3px solid lightblue;
+	}
+
+	.content {
+		width: 500px;
+		margin: 0 auto;
+		padding: 40px 0;
+		position: relative;
+		border: 3px solid lightblue;
+	}
+
+	h3 {
+		margin-bottom: 20px;
+	}
+
+	.classname {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		color: #000;
+		display: none;
+	}
+
+	.content .classname {
+		color: red;
+	}
+
+	.codeblock {
+		background: #fff;
+		color: #000;
+		width: 40%;
+		margin: 0 auto;
+		padding: 40px;
+		margin-top: 50px;
+		box-sizing: border-box;
+		font-family: monospace;
+		display: none;
+	}
+
+	/**/
+
+	.wrapper_code-visible_yes .content {
+		border: 3px solid red;
+	}
+
+	.wrapper_code-visible_yes.wrapper {
+		border: 3px solid gray;
+	}
+
+	.wrapper_code-visible_yes .classname {
+		display: block;
+	}
+</style>
+
+<div class="wrapper">
+	<div class="classname">.wrapper</div>
+	<div class="content">
+		<div class="classname">.content</div>
+		<h3>Замечательный текст</h3>
+		<div>Этот текст должен располагаться по-центру роидтельского блока и иметь фиксированную ширину 500 пикселей</div>
+	</div>
+</div>
+
+<div class="codeblock">
+<pre>
+.wrapper {
+	background: lightblue;
+}
+
+.content {
+	width: 500px;
+	margin: 0 auto;
+}
+</pre>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	var flag = 0;
+
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				$('.wrapper').addClass('wrapper_code-visible_yes');
+				$('.codeblock').fadeIn(2000);
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/2.calc/2example1.html');
+			}
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/2.calc/0cover.html');
+		}
+	});
+</script>

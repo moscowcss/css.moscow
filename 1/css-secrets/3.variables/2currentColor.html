@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+	.codeblock {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+	    font-size: 30px;
+	    line-height: 34px;
+		background: #fff;
+		color: #000;
+    }
+
+    h2 {
+        margin-bottom: 80px;
+        font-size: 50px;
+    }
+</style>
+
+<div class="codeblock">
+<h2>currentColor</h2>
+<pre>
+div {
+  color: red;
+  border: 5px solid currentColor;
+  box-shadow: 0 0 5px solid currentColor;
+}
+</pre>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+  $(document).keydown(function(e) {
+    if(e.which == 39) {
+      window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/3.variables/4fibformula.html');
+    }
+
+	  if(e.which == 37) {
+		  window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/3.variables/1example0.html');
+	  }
+  });
+</script>

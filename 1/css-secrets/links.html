@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="../common/css/reset.css">
+<link rel="stylesheet" href="../common/css/base.css">
+
+<style>
+	h1 {
+		position: relative;
+		display: block;
+		margin: 40px 0;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0 auto;
+		font-size: 20px;
+	}
+
+	ul li {
+		margin-bottom: 30px;
+	}
+
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.link {
+		display: block;
+		position: relative;
+		padding-left: 120px;
+		line-height: 100px;
+		font-size: 20px;
+	}
+
+	.link:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100px;
+		height: 100px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.link_type_medium:before {
+		background-image: url("../common/images/medium-logo.jpg");
+	}
+
+	.link_type_github:before {
+		background-image: url("../common/images/github-logo.png");
+	}
+
+	.link_type_codepen:before {
+		background-image: url("../common/images/codepen.png");
+	}
+
+</style>
+
+<div class="wrapper">
+
+	<h1>Cпасибо. Вопросы</h1>
+
+	<ul>
+		<li>
+			<a href="https://kinglet1.github.io/CSSSecrets/slides/cover.html">kinglet1.github.io/CSSSecrets/slides/cover.html</a> &mdash; Слайды
+		</li>
+		<li>
+			<a href="http://kinglet1.github.io/CSSrecipes/Airport/AirportDemo/airport.html">kinglet1.github.io/CSSrecipes/Airport/AirportDemo/airport.html</a> &mdash; Демо с расписанием аэропорта
+		</li>
+	</ul>
+
+	<div id="links">
+		<div class="links">
+			<a href="https://github.com/Kinglet1" class="link link_type_github">Kinglet1</a>
+			<a href="http://codepen.io/lucyhackwrench" class="link link_type_codepen">codepen.io/lucyhackwrench/</a>
+			<a href="https://medium.com/@lucyhackwrench" class="link link_type_medium">medium.com/@lucyhackwrench</a>
+		</div>
+
+		<div class="company"></div>
+	</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/after.html');
+		}
+	});
+</script>

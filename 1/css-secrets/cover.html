@@ -1,0 +1,761 @@
+<link rel="stylesheet" href="../common/css/reset.css">
+<link rel="stylesheet" href="../common/css/base.css">
+
+<style>
+    h1 {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+	    z-index: 10;
+    }
+
+    body {
+	    background: #fff;
+    }
+
+    /* start: sun */
+    .sun {
+	    position: absolute;
+	    width: 250px;
+	    height: 250px;
+	    top: 50px;
+	    left: 50%;
+
+	    margin-left: -125px;
+    }
+    .sun__body {
+	    position: absolute;
+	    width: 150px;
+	    height: 150px;
+	    top: 50%;
+	    left: 50%;
+	    margin-left: -75px;
+	    margin-top: -75px;
+	    background: #ffeb3b;
+	    border-radius: 200px;
+    }
+    .sun__rays {
+	    width: 125px;
+	    height: 125px;
+	    position: absolute;
+	    top: 30px;
+	    left: 25px;
+    }
+    .sun__ray {
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 0 25px 60px 25px;
+	    border-color: transparent transparent #ffc107 transparent;
+    }
+    .sun__ray:nth-child(1) {
+	    bottom: 124.9999974073266px;
+	    right: -0.025459150461897px;
+    }
+    .sun__ray:nth-child(2) {
+	    bottom: 88.36134001673142px;
+	    right: -88.41534703006927px;
+    }
+    .sun__ray:nth-child(3) {
+	    bottom: -0.050918299867678px;
+	    right: -124.99998962930653px;
+    }
+    .sun__ray:nth-child(4) {
+	    bottom: -88.43334203341635px;
+	    right: -88.3433303470092px;
+    }
+    .sun__ray:nth-child(5) {
+	    bottom: -124.99997666594008px;
+	    right: 0.076377447161255px;
+    }
+    .sun__ray:nth-child(6) {
+	    bottom: -88.32531701256059px;
+	    right: 88.45133336830303px;
+    }
+    .sun__ray:nth-child(7) {
+	    bottom: 0.101836591286427px;
+	    right: 124.99995851722781px;
+    }
+    .sun__ray:nth-child(8) {
+	    bottom: 88.469321033983px;
+	    right: 88.30730001413276px;
+    }
+    .sun__ray:nth-child(1) {
+	    transform: rotate(0rad);
+    }
+    .sun__ray:nth-child(2) {
+	    transform: rotate(0.7855rad);
+    }
+    .sun__ray:nth-child(3) {
+	    transform: rotate(1.571rad);
+    }
+    .sun__ray:nth-child(4) {
+	    transform: rotate(2.3565rad);
+    }
+    .sun__ray:nth-child(5) {
+	    transform: rotate(3.142rad);
+    }
+    .sun__ray:nth-child(6) {
+	    transform: rotate(3.9275rad);
+    }
+    .sun__ray:nth-child(7) {
+	    transform: rotate(4.713rad);
+    }
+    .sun__ray:nth-child(8) {
+	    transform: rotate(5.4985rad);
+    }
+    /* end: sun */
+
+
+    /* start: clouds */
+    .cloud {
+	    width: 200px;
+	    height: 200px;
+	    position: absolute;
+	    bottom: 150px;
+	    left: 50%;
+	    margin-left: -100px;
+    }
+    .cloud__inner {
+	    width: 100px;
+	    height: 100px;
+	    position: absolute;
+	    background: #00f;
+	    border-radius: 50px;
+    }
+    .cloud_num_1 {
+	    transform: translateX(-300px);
+    }
+    .cloud_num_1 .cloud__inner_pos_1 {
+	    left: 0;
+	    top: 50px;
+    }
+    .cloud_num_1 .cloud__inner_pos_2 {
+	    left: 50px;
+	    top: 0;
+    }
+    .cloud_num_1 .cloud__inner_pos_3 {
+	    left: 100px;
+	    top: 50px;
+    }
+    .cloud_num_1 .cloud__inner_pos_4 {
+	    left: 35px;
+	    top: 50px;
+    }
+    .cloud_num_2 {
+	    transform: translate(-400px, 50px);
+    }
+    .cloud_num_2 .cloud__inner_pos_1 {
+	    left: 0;
+	    top: 55px;
+    }
+    .cloud_num_2 .cloud__inner_pos_2 {
+	    left: 30px;
+	    top: 0;
+    }
+    .cloud_num_2 .cloud__inner_pos_3 {
+	    left: 155px;
+	    top: 50px;
+    }
+    .cloud_num_2 .cloud__inner_pos_4 {
+	    left: 35px;
+	    top: 50px;
+    }
+    .cloud_num_2 .cloud__inner_pos_5 {
+	    left: 90px;
+	    top: 30px;
+    }
+    .cloud_num_3 {
+	    transform: translate(-250px, 100px);
+    }
+    .cloud_num_3 .cloud__inner_pos_1 {
+	    left: 0;
+	    top: 50px;
+    }
+    .cloud_num_3 .cloud__inner_pos_2 {
+	    left: 70px;
+	    top: 0;
+    }
+    .cloud_num_3 .cloud__inner_pos_3 {
+	    left: 105px;
+	    top: 60px;
+    }
+    .cloud_num_3 .cloud__inner_pos_4 {
+	    left: 35px;
+	    top: 50px;
+    }
+    .cloud_num_4 {
+	    transform: translateX(300px);
+    }
+    .cloud_num_4 .cloud__inner_pos_1 {
+	    left: -10px;
+	    top: 50px;
+    }
+    .cloud_num_4 .cloud__inner_pos_2 {
+	    left: 30px;
+	    top: 0;
+    }
+    .cloud_num_4 .cloud__inner_pos_3 {
+	    left: 115px;
+	    top: 50px;
+    }
+    .cloud_num_4 .cloud__inner_pos_4 {
+	    left: 35px;
+	    top: 50px;
+    }
+    .cloud_num_4 .cloud__inner_pos_5 {
+	    left: 80px;
+	    top: 10px;
+    }
+    .cloud_num_5 {
+	    transform: translate(250px, 50px);
+    }
+    .cloud_num_5 .cloud__inner_pos_1 {
+	    left: 0;
+	    top: 50px;
+    }
+    .cloud_num_5 .cloud__inner_pos_2 {
+	    left: 80px;
+	    top: 10px;
+    }
+    .cloud_num_5 .cloud__inner_pos_3 {
+	    left: 150px;
+	    top: 50px;
+    }
+    .cloud_num_5 .cloud__inner_pos_4 {
+	    left: 70px;
+	    top: 50px;
+    }
+    .cloud_num_6 {
+	    transform: translate(350px, 100px);
+    }
+    .cloud_num_6 .cloud__inner_pos_1 {
+	    left: 0;
+	    top: 70px;
+    }
+    .cloud_num_6 .cloud__inner_pos_2 {
+	    left: 50px;
+	    top: 20px;
+    }
+    .cloud_num_6 .cloud__inner_pos_3 {
+	    left: 100px;
+	    top: 10px;
+    }
+    .cloud_num_6 .cloud__inner_pos_4 {
+	    left: 150px;
+	    top: 60px;
+    }
+    .cloud_num_6 .cloud__inner_pos_5 {
+	    left: 70px;
+	    top: 70px;
+    }
+    .cloud_num_1 .cloud__inner,
+    .cloud_num_4 .cloud__inner {
+	    background: #b3e5fc;
+    }
+    .cloud_num_2 .cloud__inner,
+    .cloud_num_5 .cloud__inner {
+	    background: #90caf9;
+    }
+    .cloud_num_3 .cloud__inner,
+    .cloud_num_6 .cloud__inner {
+	    background: #03a9f4;
+    }
+    /* end: clouds */
+
+
+    /* start: animations */
+    @-webkit-keyframes sunRotate {
+	    0% {
+		    transform: rotate(0deg);
+	    }
+	    50% {
+		    transform: rotate(360deg);
+	    }
+	    100% {
+		    transform: rotate(0deg);
+	    }
+    }
+    .sun {
+	    -webkit-animation: sunRotate 15s infinite;
+	    animation: sunRotate 15s infinite;
+    }
+    @-webkit-keyframes cloud1Animation {
+	    0% {
+		    transform: translateX(-300px);
+	    }
+	    50% {
+		    transform: translateX(-380px);
+	    }
+	    100% {
+		    transform: translateX(-300px);
+	    }
+    }
+    .cloud_num_1 {
+	    -webkit-animation: cloud1Animation 10s infinite;
+	    animation: cloud1Animation 10s infinite;
+    }
+    @-webkit-keyframes cloud2Animation {
+	    0% {
+		    transform: translate(-400px, 50px);
+	    }
+	    50% {
+		    transform: translate(-500px, 50px);
+	    }
+	    100% {
+		    transform: translate(-400px, 50px);
+	    }
+    }
+    .cloud_num_2 {
+	    -webkit-animation: cloud2Animation 10s infinite;
+	    animation: cloud2Animation 10s infinite;
+    }
+    @-webkit-keyframes cloud3Animation {
+	    0% {
+		    transform: translate(-250px, 100px);
+	    }
+	    50% {
+		    transform: translate(-300px, 100px);
+	    }
+	    100% {
+		    transform: translate(-250px, 100px);
+	    }
+    }
+    .cloud_num_3 {
+	    -webkit-animation: cloud3Animation 10s infinite;
+	    animation: cloud3Animation 10s infinite;
+    }
+    @-webkit-keyframes cloud4Animation {
+	    0% {
+		    transform: translateX(300px);
+	    }
+	    50% {
+		    transform: translateX(380px);
+	    }
+	    100% {
+		    transform: translateX(300px);
+	    }
+    }
+    .cloud_num_4 {
+	    -webkit-animation: cloud4Animation 10s infinite;
+	    animation: cloud4Animation 10s infinite;
+    }
+    @-webkit-keyframes cloud5Animation {
+	    0% {
+		    transform: translate(250px, 50px);
+	    }
+	    50% {
+		    transform: translate(350px, 50px);
+	    }
+	    100% {
+		    transform: translate(250px, 50px);
+	    }
+    }
+    .cloud_num_5 {
+	    -webkit-animation: cloud5Animation 10s infinite;
+	    animation: cloud5Animation 10s infinite;
+    }
+    @-webkit-keyframes cloud6Animation {
+	    0% {
+		    transform: translate(350px, 100px);
+	    }
+	    50% {
+		    transform: translate(430px, 100px);
+	    }
+	    100% {
+		    transform: translate(350px, 100px);
+	    }
+    }
+    .cloud_num_6 {
+	    -webkit-animation: cloud6Animation 10s infinite;
+	    animation: cloud6Animation 10s infinite;
+    }
+    @-moz-keyframes sunRotate {
+	    0% {
+		    transform: rotate(0deg);
+	    }
+	    50% {
+		    transform: rotate(360deg);
+	    }
+	    100% {
+		    transform: rotate(0deg);
+	    }
+    }
+    @-webkit-keyframes sunRotate {
+	    0% {
+		    transform: rotate(0deg);
+	    }
+	    50% {
+		    transform: rotate(360deg);
+	    }
+	    100% {
+		    transform: rotate(0deg);
+	    }
+    }
+    @-o-keyframes sunRotate {
+	    0% {
+		    transform: rotate(0deg);
+	    }
+	    50% {
+		    transform: rotate(360deg);
+	    }
+	    100% {
+		    transform: rotate(0deg);
+	    }
+    }
+    @keyframes sunRotate {
+	    0% {
+		    transform: rotate(0deg);
+	    }
+	    50% {
+		    transform: rotate(360deg);
+	    }
+	    100% {
+		    transform: rotate(0deg);
+	    }
+    }
+    @-moz-keyframes cloud1Animation {
+	    0% {
+		    transform: translateX(-300px);
+	    }
+	    50% {
+		    transform: translateX(-380px);
+	    }
+	    100% {
+		    transform: translateX(-300px);
+	    }
+    }
+    @-webkit-keyframes cloud1Animation {
+	    0% {
+		    transform: translateX(-300px);
+	    }
+	    50% {
+		    transform: translateX(-380px);
+	    }
+	    100% {
+		    transform: translateX(-300px);
+	    }
+    }
+    @-o-keyframes cloud1Animation {
+	    0% {
+		    transform: translateX(-300px);
+	    }
+	    50% {
+		    transform: translateX(-380px);
+	    }
+	    100% {
+		    transform: translateX(-300px);
+	    }
+    }
+    @keyframes cloud1Animation {
+	    0% {
+		    transform: translateX(-300px);
+	    }
+	    50% {
+		    transform: translateX(-380px);
+	    }
+	    100% {
+		    transform: translateX(-300px);
+	    }
+    }
+    @-moz-keyframes cloud2Animation {
+	    0% {
+		    transform: translate(-400px, 50px);
+	    }
+	    50% {
+		    transform: translate(-500px, 50px);
+	    }
+	    100% {
+		    transform: translate(-400px, 50px);
+	    }
+    }
+    @-webkit-keyframes cloud2Animation {
+	    0% {
+		    transform: translate(-400px, 50px);
+	    }
+	    50% {
+		    transform: translate(-500px, 50px);
+	    }
+	    100% {
+		    transform: translate(-400px, 50px);
+	    }
+    }
+    @-o-keyframes cloud2Animation {
+	    0% {
+		    transform: translate(-400px, 50px);
+	    }
+	    50% {
+		    transform: translate(-500px, 50px);
+	    }
+	    100% {
+		    transform: translate(-400px, 50px);
+	    }
+    }
+    @keyframes cloud2Animation {
+	    0% {
+		    transform: translate(-400px, 50px);
+	    }
+	    50% {
+		    transform: translate(-500px, 50px);
+	    }
+	    100% {
+		    transform: translate(-400px, 50px);
+	    }
+    }
+    @-moz-keyframes cloud3Animation {
+	    0% {
+		    transform: translate(-250px, 100px);
+	    }
+	    50% {
+		    transform: translate(-300px, 100px);
+	    }
+	    100% {
+		    transform: translate(-250px, 100px);
+	    }
+    }
+    @-webkit-keyframes cloud3Animation {
+	    0% {
+		    transform: translate(-250px, 100px);
+	    }
+	    50% {
+		    transform: translate(-300px, 100px);
+	    }
+	    100% {
+		    transform: translate(-250px, 100px);
+	    }
+    }
+    @-o-keyframes cloud3Animation {
+	    0% {
+		    transform: translate(-250px, 100px);
+	    }
+	    50% {
+		    transform: translate(-300px, 100px);
+	    }
+	    100% {
+		    transform: translate(-250px, 100px);
+	    }
+    }
+    @keyframes cloud3Animation {
+	    0% {
+		    transform: translate(-250px, 100px);
+	    }
+	    50% {
+		    transform: translate(-300px, 100px);
+	    }
+	    100% {
+		    transform: translate(-250px, 100px);
+	    }
+    }
+    @-moz-keyframes cloud4Animation {
+	    0% {
+		    transform: translateX(300px);
+	    }
+	    50% {
+		    transform: translateX(380px);
+	    }
+	    100% {
+		    transform: translateX(300px);
+	    }
+    }
+    @-webkit-keyframes cloud4Animation {
+	    0% {
+		    transform: translateX(300px);
+	    }
+	    50% {
+		    transform: translateX(380px);
+	    }
+	    100% {
+		    transform: translateX(300px);
+	    }
+    }
+    @-o-keyframes cloud4Animation {
+	    0% {
+		    transform: translateX(300px);
+	    }
+	    50% {
+		    transform: translateX(380px);
+	    }
+	    100% {
+		    transform: translateX(300px);
+	    }
+    }
+    @keyframes cloud4Animation {
+	    0% {
+		    transform: translateX(300px);
+	    }
+	    50% {
+		    transform: translateX(380px);
+	    }
+	    100% {
+		    transform: translateX(300px);
+	    }
+    }
+    @-moz-keyframes cloud5Animation {
+	    0% {
+		    transform: translate(250px, 50px);
+	    }
+	    50% {
+		    transform: translate(350px, 50px);
+	    }
+	    100% {
+		    transform: translate(250px, 50px);
+	    }
+    }
+    @-webkit-keyframes cloud5Animation {
+	    0% {
+		    transform: translate(250px, 50px);
+	    }
+	    50% {
+		    transform: translate(350px, 50px);
+	    }
+	    100% {
+		    transform: translate(250px, 50px);
+	    }
+    }
+    @-o-keyframes cloud5Animation {
+	    0% {
+		    transform: translate(250px, 50px);
+	    }
+	    50% {
+		    transform: translate(350px, 50px);
+	    }
+	    100% {
+		    transform: translate(250px, 50px);
+	    }
+    }
+    @keyframes cloud5Animation {
+	    0% {
+		    transform: translate(250px, 50px);
+	    }
+	    50% {
+		    transform: translate(350px, 50px);
+	    }
+	    100% {
+		    transform: translate(250px, 50px);
+	    }
+    }
+    @-moz-keyframes cloud6Animation {
+	    0% {
+		    transform: translate(350px, 100px);
+	    }
+	    50% {
+		    transform: translate(430px, 100px);
+	    }
+	    100% {
+		    transform: translate(350px, 100px);
+	    }
+    }
+    @-webkit-keyframes cloud6Animation {
+	    0% {
+		    transform: translate(350px, 100px);
+	    }
+	    50% {
+		    transform: translate(430px, 100px);
+	    }
+	    100% {
+		    transform: translate(350px, 100px);
+	    }
+    }
+    @-o-keyframes cloud6Animation {
+	    0% {
+		    transform: translate(350px, 100px);
+	    }
+	    50% {
+		    transform: translate(430px, 100px);
+	    }
+	    100% {
+		    transform: translate(350px, 100px);
+	    }
+    }
+    @keyframes cloud6Animation {
+	    0% {
+		    transform: translate(350px, 100px);
+	    }
+	    50% {
+		    transform: translate(430px, 100px);
+	    }
+	    100% {
+		    transform: translate(350px, 100px);
+	    }
+    }
+</style>
+
+
+<div class="sun">
+	<div class="sun__body"></div>
+	<div class="sun__rays">
+		<div class="sun__ray"></div>
+		<div class="sun__ray"></div>
+		<div class="sun__ray"></div>
+		<div class="sun__ray"></div>
+		<div class="sun__ray"></div>
+		<div class="sun__ray"></div>
+		<div class="sun__ray"></div>
+		<div class="sun__ray"></div>
+	</div>
+</div>
+
+<h1>
+    Несколько фишек CSS, о которых вы могли не знать
+</h1>
+
+<div class="cloud cloud_num_1">
+	<div class="cloud__inner cloud__inner_pos_1"></div>
+	<div class="cloud__inner cloud__inner_pos_2"></div>
+	<div class="cloud__inner cloud__inner_pos_3"></div>
+	<div class="cloud__inner cloud__inner_pos_4"></div>
+</div>
+
+<div class="cloud cloud_num_2">
+	<div class="cloud__inner cloud__inner_pos_1"></div>
+	<div class="cloud__inner cloud__inner_pos_2"></div>
+	<div class="cloud__inner cloud__inner_pos_3"></div>
+	<div class="cloud__inner cloud__inner_pos_4"></div>
+	<div class="cloud__inner cloud__inner_pos_5"></div>
+</div>
+
+<div class="cloud cloud_num_3">
+	<div class="cloud__inner cloud__inner_pos_1"></div>
+	<div class="cloud__inner cloud__inner_pos_2"></div>
+	<div class="cloud__inner cloud__inner_pos_3"></div>
+	<div class="cloud__inner cloud__inner_pos_4"></div>
+</div>
+
+<div class="cloud cloud_num_4">
+	<div class="cloud__inner cloud__inner_pos_1"></div>
+	<div class="cloud__inner cloud__inner_pos_2"></div>
+	<div class="cloud__inner cloud__inner_pos_3"></div>
+	<div class="cloud__inner cloud__inner_pos_4"></div>
+	<div class="cloud__inner cloud__inner_pos_5"></div>
+</div>
+
+<div class="cloud cloud_num_5">
+	<div class="cloud__inner cloud__inner_pos_1"></div>
+	<div class="cloud__inner cloud__inner_pos_2"></div>
+	<div class="cloud__inner cloud__inner_pos_3"></div>
+	<div class="cloud__inner cloud__inner_pos_4"></div>
+</div>
+
+<div class="cloud cloud_num_6">
+	<div class="cloud__inner cloud__inner_pos_1"></div>
+	<div class="cloud__inner cloud__inner_pos_2"></div>
+	<div class="cloud__inner cloud__inner_pos_3"></div>
+	<div class="cloud__inner cloud__inner_pos_4"></div>
+	<div class="cloud__inner cloud__inner_pos_5"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    $(document).keydown(function(e) {
+        if(e.which == 39) {
+            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/hi.html');
+        }
+    });
+</script>

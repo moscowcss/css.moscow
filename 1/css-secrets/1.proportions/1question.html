@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    .codeblock {
+        padding: 60px;
+        margin: 0;
+	    font-size: 30px;
+	    line-height: 34px;
+	    background: #fff;
+	    color: #000;
+    }
+
+    .codeblock:first-child {
+        margin-bottom: 20px;
+    }
+
+    .pagewrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #hidden {
+        display: none;
+    }
+</style>
+
+<div class="pagewrap">
+
+<div class="codeblock">
+<pre>
+&lt;div class="wrapper"&gt;
+    &lt;div class="element"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<div class="codeblock">
+<pre>
+.wrapper {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.element {
+    margin-top: 50%; <span style="color: red"><span id="visible">???</span><span id="hidden">150px</span></span>
+}
+</pre>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	var flag = 0;
+
+    $(document).keydown(function(e) {
+	    if(e.which == 39) {
+		    if (!flag) {
+			    $('#visible').hide();
+			    $('#hidden').show();
+			    flag = 1;
+		    }
+		    else {
+			    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/1.proportions/2example.html');
+		    }
+	    }
+
+	    if(e.which == 37) {
+		    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/1.proportions/0cover.html');
+	    }
+    });
+</script>

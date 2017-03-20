@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+    body {
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        position: relative;
+    }
+
+    h1 {
+        bottom: 50px;
+        left: 50px;
+    }
+
+    img {
+	    position: absolute;
+	    right: 50px;
+	    top: 50px;
+	    width: 40%;
+	    height: auto;
+    }
+</style>
+
+<h1><span class="highlighted">5.</span> Псевдокласс :target</h1>
+
+<img src="cover.jpg" alt="">
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    $(document).keydown(function(e) {
+        if(e.which == 39) {
+            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/5.target/1popular.html');
+        }
+
+	    if(e.which == 37) {
+		    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/4.siblings-selectors/5browsers2.html');
+	    }
+    });
+</script>

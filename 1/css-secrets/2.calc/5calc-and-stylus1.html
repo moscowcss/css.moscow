@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-size: 20px;
+		line-height: 24px;
+		font-family: Arial, sans-serif;
+	}
+
+	.codeblock {
+		background: #fff;
+		color: #000;
+		width: 60%;
+		margin: 0 auto;
+		padding: 40px;
+		margin-top: 40px;
+		box-sizing: border-box;
+		font-family: monospace;
+	}
+
+	h1 {
+		font-size: 50px;
+		line-height: 60px;
+		text-align: center;
+		margin-top: 30px;
+		position: static;
+		display: block;
+		width: 100%;
+	}
+
+	.red-cross {
+		margin: 0 auto;
+		margin-top: 50px;
+		display: none;
+	}
+
+	.red-cross_visible_yes {
+		display: block;
+	}
+
+	.highlighted {
+		color: coral;
+	}
+	
+	.link {
+		color: #06c;
+	}
+
+	.stylus-link-wrapper {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.dot {
+		top: 0;
+	}
+</style>
+
+
+<div class="dot"></div>
+
+<h1>
+	Stylus + calc() + <span class="highlighted">Sprintf</span>
+</h1>
+
+<div class="stylus-link-wrapper">
+	<a class="link" href="http://stylus-lang.com/docs/operators.html#sprintf">http://stylus-lang.com/docs/operators.html#sprintf</a>
+</div>
+
+<div class="codeblock">
+<pre>
+$width = 500px
+
+.blockname {
+	width $width
+	padding "0 calc(50% - %s/2)" % $width
+}
+</pre>
+</div>
+
+<img class="red-cross" src="green-tick.png" alt="" width="150" height="150">
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	var flag = 0;
+
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				$('.red-cross').addClass('red-cross_visible_yes');
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/3.variables/0cover.html');
+			}
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/2.calc/4calc-and-stylus0.html');
+		}
+	});
+</script>

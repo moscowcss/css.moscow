@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+	h1 {
+		position: relative;
+		display: block;
+		margin: 40px 0;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0 auto;
+		font-size: 20px;
+	}
+
+	ul li {
+		margin-bottom: 30px;
+	}
+
+	.wrapper {
+		width: 60%;
+		margin: 0 auto;
+	}
+</style>
+
+<div class="wrapper">
+
+<h1>Hardware-Accelerated CSS</h1>
+
+<ul>
+	<li>
+		<a href="https://www.sitepoint.com/introduction-to-hardware-acceleration-css-animations/">An Introduction to Hardware Acceleration with CSS Animations (By Artem Tabalin)</a>
+	</li>
+	<li>
+		<a href="https://www.sitepoint.com/introduction-to-hardware-acceleration-css-animations/">Let’s Play With Hardware-Accelerated CSS (By Martin Kool) Smashing magazine</a>
+	</li>
+	<li>
+		<a href="https://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome">GPU Accelerated Compositing in Chrome</a>
+	</li>
+</ul>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/0.translate/5browsers.html');
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/0.translate/3gpu0.html');
+		}
+	});
+</script>

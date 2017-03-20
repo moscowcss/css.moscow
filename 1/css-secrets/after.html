@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="../common/css/reset.css">
+<link rel="stylesheet" href="../common/css/base.css">
+
+<style>
+    body {
+        background: #000;
+    }
+
+    .codeblock {
+        font-size: 55px;
+	    line-height: 60px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<div class="codeblock">.speech::after</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    $(document).keydown(function(e) {
+        if(e.which == 39) {
+            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/links.html');
+        }
+
+	    if(e.which == 37) {
+		    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/7.transform3d/4links.html');
+	    }
+    });
+</script>

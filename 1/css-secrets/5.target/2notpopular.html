@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+	.item {
+        font-size: 80px;
+        font-weight: bold;
+        position: absolute;
+    }
+
+    .highlighted {
+        color: coral;
+    }
+
+    img {
+	    position: absolute;
+	    bottom: 50px;
+	    left: 50px;
+	    width: 40%;
+	    height: auto;
+    }
+</style>
+
+<div class="item" style="transform: rotate(20deg); top: 10%; right: 20%">:empty</div>
+<div class="item" style="transform: rotate(-20deg); top: 60%; right: 10%">:valid</div>
+<div class="item" style="transform: rotate(40deg); top: 20%; right: 30%">:invalid</div>
+<div class="item" id="target" style="transform: rotate(-30deg); top: 30%; right: 30px">:target</div>
+
+<img src="sadcat.jpg" alt="">
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	var flag = 0;
+
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				$('#target').addClass('highlighted');
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/5.target/3airportdemo.html');
+			}
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/5.target/1popular.html');
+		}
+	});
+</script>

@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+	h1 {
+		position: relative;
+		display: block;
+		margin: 40px 0;
+		width: 100%;
+	}
+
+	ul {
+		margin: 0 auto;
+		font-size: 20px;
+	}
+
+	ul li {
+		margin-bottom: 30px;
+	}
+
+	.wrapper {
+		width: 60%;
+		margin: 0 auto;
+	}
+</style>
+
+<div class="wrapper">
+
+<h1>Полезные ссылки</h1>
+
+<ul>
+	<li>
+		<a href="https://www.w3.org/TR/css-transforms-1/">CSS3 3D Transforms, W3C</a>
+	</li>
+    <li>
+        <a href="https://codepen.io/tag/3d%20transform/">Подборка вдохновляющих демок на Codepen</a>
+    </li>
+    <li>
+        <a href="https://www.smashingmagazine.com/2012/01/adventures-in-the-third-dimension-css-3-d-transforms/">Adventures In The Third Dimension: CSS 3D Transforms, Smashing magazine</a>
+    </li>
+
+	<li>
+		<a href="https://habrahabr.ru/post/151300/">3D-трансформации средствами CSS (Павлов Михаил) на Хабре</a>
+	</li>
+
+    <li>
+        <a href="https://designmodo.com/apple-tv-effect/">Create an Apple TV Poster Parallax Effect in CSS3 & jQuery (Marius Balaj)</a>
+    </li>
+</ul>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+    $(document).keydown(function(e) {
+        if(e.which == 39) {
+            window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/after.html');
+        }
+
+	    if(e.which == 37) {
+		    window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/7.transform3d/3browsers.html');
+	    }
+    });
+</script>

@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="../../common/css/reset.css">
+<link rel="stylesheet" href="../../common/css/base.css">
+
+<style>
+	.wrapper {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		margin-top: 40px;
+		height: auto;
+	}
+
+	.dot {
+		top: -20px;
+	}
+</style>
+
+<div class="dot"></div>
+
+<div class="wrapper">
+	<h2 style="margin-top: 40px; text-align: center">CSS 2.1 selectors: + (adjacent sibling selector)</h2>
+
+	<img src="browsers2.png" alt="">
+
+	<div style="margin: 40px 0; font-size: 20px; text-align: center">
+		<a href="http://caniuse.com/#feat=css-sel2">CAN I USE</a>
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/5.target/0cover.html');
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/4.siblings-selectors/4browsers1.html');
+		}
+	});
+</script>

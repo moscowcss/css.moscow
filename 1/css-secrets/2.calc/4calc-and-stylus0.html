@@ -1,0 +1,80 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-size: 20px;
+		line-height: 24px;
+		font-family: Arial, sans-serif;
+	}
+
+	.codeblock {
+		background: #fff;
+		color: #000;
+		width: 40%;
+		margin: 0 auto;
+		padding: 40px;
+		margin-top: 50px;
+		box-sizing: border-box;
+		font-family: monospace;
+	}
+
+	h1 {
+		font-size: 50px;
+		line-height: 60px;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.red-cross {
+		margin: 0 auto;
+		margin-top: 50px;
+		display: none;
+	}
+
+	.red-cross_visible_yes {
+		display: block;
+	}
+</style>
+
+
+<h1>
+	Stylus + calc()
+</h1>
+
+<div class="codeblock">
+<pre>
+$width = 500px
+
+.blockname {
+	width $width
+	padding: 0 calc(50% - $width/2);
+}
+</pre>
+</div>
+
+<img class="red-cross" src="red-cross.png" alt="" width="150" height="150">
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	var flag = 0;
+
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				$('.red-cross').addClass('red-cross_visible_yes');
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/2.calc/5calc-and-stylus1.html');
+			}
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/2.calc/3browsers.html');
+		}
+	});
+</script>

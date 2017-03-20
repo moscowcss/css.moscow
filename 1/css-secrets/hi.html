@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="../common/css/reset.css">
+<link rel="stylesheet" href="../common/css/base.css">
+
+<style>
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .wrapper__item {
+        width: 50%;
+	    flex-grow: 1;
+	    padding: 40px;
+    }
+
+    .wrapper__item:first-child {
+	    width: 30%;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .links {
+
+    }
+
+    .link {
+        display: block;
+        position: relative;
+        margin-bottom: 5px;
+        padding-left: 120px;
+        line-height: 100px;
+        font-size: 30px;
+    }
+
+    .link:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    .link_type_medium:before {
+        background-image: url("../common/images/medium-logo.jpg");
+    }
+
+    .link_type_github:before {
+        background-image: url("../common/images/github-logo.png");
+    }
+
+    .link_type_codepen:before {
+        background-image: url("../common/images/codepen.png");
+    }
+
+    .company {
+        width: 320px;
+        height: 200px;
+        background: url('../common/images/mailru.png');
+    }
+
+    #links {
+        display: none;
+    }
+
+	.name {
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.link_type_mail {
+		padding-left: 0;
+	}
+</style>
+
+<div class="wrapper">
+    <div class="wrapper__item">
+	    <div class="name">Людмила Мжачих</div>
+        <img src="../common/images/my_photo.jpg" alt="">
+    </div>
+    <div class="wrapper__item">
+        <div id="links">
+            <div class="links">
+                <a href="https://github.com/Kinglet1" class="link link_type_github">Kinglet1</a>
+                <a href="http://codepen.io/lucyhackwrench" class="link link_type_codepen">codepen.io/lucyhackwrench/</a>
+                <a href="https://medium.com/@lucyhackwrench" class="link link_type_medium">medium.com/@lucyhackwrench</a>
+	            <a href="https://medium.com/@lucyhackwrench" class="link link_type_mail">l.mzhachikh@corp.mail.ru</a>
+            </div>
+
+            <div class="company"></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	var flag = 0;
+
+	$(document).keydown(function(e) {
+		if(e.which == 39) {
+			if (!flag) {
+				$('#links').fadeIn();
+				flag = 1;
+			}
+			else {
+				window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/before.html');
+			}
+		}
+
+		if(e.which == 37) {
+			window.location.replace('https://kinglet1.github.io/CSSSecrets/slides/cover.html');
+		}
+	});
+</script>
